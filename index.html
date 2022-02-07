@@ -447,9 +447,6 @@
             <form class="footer-form">
               <p class="footer-subscribe-text">Подпишитесь на рассылку</p>
 
-              <!-- <label for="mail" class="footer-subscribe-text"
-                  >Подпишитесь на рассылку</label
-                > -->
               <div class="footer-mail-btn">
                 <input
                   type="email"
@@ -472,13 +469,32 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <div class="circle-close-btn">
-          <button class="btn-close-main" data-modal-close>
-            <svg class="btn-close" width="11" height="11">
-              <use href="images/icons.svg#icon-close-black-18dp-1"></use>
-            </svg>
-          </button>
-        </div>
+        <form class="form">
+          <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+          <div class="form-field">
+            <label for="name" class="form-label">Имя</label>
+            <!-- <svg class="icon-modal-person" width="12" height="12">
+              <use href="./images/icons.svg#icon-modal-person"></use>
+            </svg> -->
+
+            <input
+              type="text"
+              class="form-input"
+              name="user-name"
+              placeholder="Александр Александров"
+              id="name"
+              autofocus
+            />
+          </div>
+          <div class="form-field"></div>
+          <div class="circle-close-btn">
+            <button class="btn-close-main" data-modal-close>
+              <svg class="btn-close" width="11" height="11">
+                <use href="images/icons.svg#icon-close-black-18dp-1"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
 

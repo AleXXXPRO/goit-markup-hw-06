@@ -745,17 +745,24 @@ a {
   padding-left: 29px;
   width: 200px;
   height: 50px;
+  border: none;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  cursor: pointer;
   background-color: var(--accent-color);
 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: #ffffff;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.footer-btn:hover,
+.footer-btn:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
 .plane {
   padding: 0;
   margin: 0;
@@ -918,6 +925,7 @@ a {
 .modal {
   display: flex;
   position: absolute;
+  padding: 40px;
   top: 50%;
   left: 50%;
   /* transform: translate(-50%, -50%); */
@@ -954,6 +962,48 @@ a {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #fff;
+}
+
+/* --------------------------------------Modal--------------- */
+.form {
+  display: flex;
+  width: 100%;
+  /* width: 528px; */
+  outline: 1px solid tomato;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  border: none;
+  margin: 0;
+}
+.form-title {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--header-text-color);
+  /* color: #212121; */
+}
+.form-label {
+  margin-bottom: 4px;
+  /* font-style: normal;
+font-weight: normal; */
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+.form-field {
+  outline: 1px solid teal;
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+.form-input {
+  width: 100%;
 }
 
 /* -----------Вариант 2 оверлея в портфолио----- */
