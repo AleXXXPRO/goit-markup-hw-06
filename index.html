@@ -467,7 +467,7 @@
         </div>
       </section>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <form class="form">
           <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
@@ -508,10 +508,18 @@
             ></textarea>
           </div>
           <div class="form-field form-field-check">
-            <input type="checkbox" name="policy" id="policy" class="checkbox" />
-            <label for="policy" class="form-label-policy"
-              >Соглашаюсь с рассылкой и принимаю
-              <span> <a href="" class="policy-deal">Условия договора</a> </span>
+            <label class="form-label-policy">
+              <input
+                type="checkbox"
+                name="policy"
+                id="policy"
+                class="checkbox"
+              />
+              <span class="icon"></span>
+              Соглашаюсь с рассылкой и принимаю
+              <span class="policy-link">
+                <a href="" class="policy-deal">Условия договора</a>
+              </span>
             </label>
           </div>
           <button type="submit" class="btn-modal-sub">Отправить</button>

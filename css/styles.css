@@ -941,6 +941,7 @@ a {
   color: #000000;
   background-color: transparent;
   border: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-close-main {
   width: 100%;
@@ -989,12 +990,10 @@ a {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--header-text-color);
-  /* color: #212121; */
 }
 .form-label {
   margin-bottom: 4px;
-  /* font-style: normal;
-font-weight: normal; */
+
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -1014,12 +1013,14 @@ font-weight: normal; */
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus + .icon-modal {
   fill: var(--accent-color);
 }
 .form-input:focus {
-  border: 1px solid var(--accent-color);
+  border-color: var(--accent-color);
+  outline: var(--accent-color);
 }
 .icon-modal {
   position: absolute;
@@ -1030,6 +1031,7 @@ font-weight: normal; */
   width: 18px;
   height: 18px;
   fill: var(--title-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field textarea::placeholder {
@@ -1046,9 +1048,17 @@ textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+textarea:focus {
+  border-color: var(--accent-color);
+  outline: var(--accent-color);
 }
 .form-field-coment {
   margin-bottom: 20px;
+}
+.form-field-check {
+  padding-left: 14px;
 }
 .form-label-policy {
   font-weight: normal;
@@ -1058,12 +1068,22 @@ textarea {
   color: var(--primary-text-color);
 }
 .policy-deal {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
   color: var(--accent-color);
   text-decoration-line: underline;
 }
 .form-field-check {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: row;
+  /* align-items: center; */
   margin-bottom: 30px;
+}
+.form-label-policy {
+  display: flex;
+  align-items: center;
 }
 .btn-modal-sub {
   display: flex;
@@ -1074,6 +1094,7 @@ textarea {
   margin: 0;
   padding: 0;
   border: 0;
+  cursor: pointer;
   margin-left: auto;
   margin-right: auto;
   font-weight: bold;
@@ -1084,6 +1105,42 @@ textarea {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-modal-sub:focus,
+.btn-modal-sub:hover {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.checkbox {
+  -webkit-appearance: none;
+  position: absolute;
+}
+.icon {
+  display: inline-block;
+  background-position: 50% 50%;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border-radius: 2px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  color: #fff;
+  border: 1px solid var(--title-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* background-image 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+.policy-link {
+  margin-left: 3px;
+}
+.checkbox:checked + .icon {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url(../images/icon-check.svg);
 }
 /* -----------Вариант 2 оверлея в портфолио----- */
 
