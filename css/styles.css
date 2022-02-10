@@ -683,9 +683,9 @@ a {
 /* -------Footer subs------ */
 
 .footer-subscribe {
-  margin-top: 72px;
+  /* margin-top: 72px; */
   margin-left: 93px;
-  margin-bottom: 94px;
+  /* margin-bottom: 94px; */
   margin-right: 0;
   width: 570px;
 }
@@ -717,6 +717,7 @@ a {
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--second-title-text);
   background-color: #2f303a;
 }
 .footer-input::placeholder {
@@ -1025,8 +1026,6 @@ a {
 }
 .icon-modal {
   position: absolute;
-  /* top: 50%;
-  left: 15px; */
   bottom: 11px;
   left: 11px;
   width: 18px;
@@ -1130,7 +1129,7 @@ textarea:focus {
   background-origin: border-box;
   color: #fff;
   border: 1px solid var(--title-text-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* background-image 250ms cubic-bezier(0.4, 0, 0.2, 1); */
