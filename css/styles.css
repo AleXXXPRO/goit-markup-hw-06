@@ -1002,7 +1002,7 @@ a {
   color: var(--primary-text-color);
 }
 .form-field {
-  position: relative;
+  /* position: relative; */
   /* outline: 1px solid teal; */
   width: 100%;
   display: flex;
@@ -1024,10 +1024,14 @@ a {
   border-color: var(--accent-color);
   outline: var(--accent-color);
 }
+.input-icon-modal {
+  position: relative;
+}
 .icon-modal {
   position: absolute;
-  bottom: 11px;
-  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
   width: 18px;
   height: 18px;
   fill: var(--title-text-color);
